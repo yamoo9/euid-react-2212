@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "euid-react-2212",
+  "version": "1.0.0",
+  "description": "이듬과 함께 React 프로그래밍을 학습합니다.",
+  "keywords": [
+    "react"
+  ],
+  "license": "MIT"
+}
