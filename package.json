@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "react-jsx-babel",
+  "version": "1.0.0",
+  "description": "React, Babel을 사용해 프론트엔드 개발에 필요한 환경을 구성합니다.",
+  "keywords": [
+    "react",
+    "babel",
+    "jsx"
+  ],
+  "license": "MIT"
+}
