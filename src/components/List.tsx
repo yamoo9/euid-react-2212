@@ -1,8 +1,26 @@
-import { ALink } from './ALink.jsx';
+import { ALink } from './ALink.js';
 import { ListItem } from './ListItem.js';
 
-export class List extends React.Component {
-  constructor(props) {
+// @ts-ignore
+const { React } = window;
+
+interface ListItem {
+  id: number;
+  href: string;
+  text: string;
+  isExternal: boolean;
+}
+
+interface Props {}
+
+interface State {
+  listItems: ListItem[];
+}
+
+export class List extends React.Component<Props, State> {
+  state: State;
+
+  constructor(props: Props) {
     super(props);
     this.state = {
       listItems: [
@@ -31,6 +49,7 @@ export class List extends React.Component {
 
   render() {
     return (
+      // @ts-ignore
       <ul>
         {this.state.listItems.map(({ id, href, isExternal, text }) => (
           <ListItem key={id}>
