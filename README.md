@@ -1,12 +1,13 @@
 # React 개발 환경 구성
 
-React, Babel, TypeScript를 사용해 프론트엔드 개발에 필요한 환경을 구성합니다.
+React, TypeScript를 사용해 프론트엔드 개발에 필요한 환경을 구성합니다.
 
-## Babel Compiler + TypeScript Preset
+## TypeScript Compiler
 
-Babel로 구성된 React 환경에 TypeScript 프리셋을 추가 구성합니다.
+TypeScript 컴파일러를 사용하는 React 개발 환경을 구성합니다.
 
-- [ ] [@babel/preset-typescript](https://babeljs.io/docs/en/babel-preset-typescript) 프리셋 구성
-- [ ] @babel/preset-typescript 프리셋 제한사항 ([참고](https://www.typescriptlang.org/ko/docs/handbook/babel-with-typescript.html))
-- [ ] `*.jsx?` → `*.tsx?` 변환
-- [ ] 타입 시스템 반영
+- [ ] [typescript](https://www.typescriptlang.org/ko/download) 설치
+- [ ] [tsc CLI](https://www.typescriptlang.org/ko/docs/handbook/compiler-options.html) 활용
+- [ ] [tsconfig.json](https://www.typescriptlang.org/ko/tsconfig) 구성 파일 설정
+- [ ] [jsx](https://www.typescriptlang.org/ko/tsconfig#jsx), [jsxImportSource](https://www.typescriptlang.org/ko/tsconfig#jsxImportSource) 설정
+- [ ] React + TypeScript 타입 검사 검토 및 반영
