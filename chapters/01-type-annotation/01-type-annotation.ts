@@ -22,31 +22,34 @@
 
 {
   // 정의 되지 않음(undefined)
-  let notDefiend;
+  let notDefiend: undefined; // undefined
 
   // 비어 있음(null)
-  let empty;
+  let empty: null;
 
   // 문자 타입(string type)
-  let message = `변수 타입은 변수 이름 뒤에 ':type'을 작성하는 것을 말하며 이를 "타입 에너테이션"이라 부릅니다.`;
+  let message: string = `변수 타입은 변수 이름 뒤에 ':type'을 작성하는 것을 말하며 이를 "타입 에너테이션"이라 부릅니다.`;
 
   // 숫자 타입(number type)
-  let currentYear = 2022;
+  let currentYear: number = 2022;
 
   // 불리언 타입(boolean type)
-  let isWatch = false;
+  let isWatch: boolean = false;
 
   // 심볼(symbol type)
-  let uniqueId = Symbol('uniqueId');
+  let uniqueId: symbol = Symbol('uniqueId');
 
   // 객체(object type)
-  const rectangle = {
+  const rectangle: {
+    width: number;
+    height: number;
+  } = {
     width: 100,
     height: 80,
   };
 
   // 배열(array type)
-  const namesList = ['최수영', '한영주', '박호연'];
+  const namesList: string[] = ['최수영', '한영주', '박호연'];
 
   // 함수(function type)
   const sum = (x, y, printable) => {
