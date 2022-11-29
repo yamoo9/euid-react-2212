@@ -3,6 +3,12 @@
   "name": "euid-react-2212",
   "version": "1.0.0",
   "description": "이듬과 함께 React 프로그래밍을 학습합니다.",
+  "scripts": {
+    "start": "live-server public --host=localhost --port=3000 --no-browser"
+  },
+  "devDependencies": {
+    "live-server": "1.2.2"
+  },
   "keywords": [
     "react"
   ],

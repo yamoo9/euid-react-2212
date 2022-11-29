@@ -1,0 +1,46 @@
+:root {
+  --white: #fff;
+  --blue: #005ca3;
+  --animate: running;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font: 1rem /1.5 Pretendard, 'Spoqa Han Sans', Arial, Sans-Serif;
+  background: var(--blue);
+  color: var(--white);
+}
+
+#app {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  min-height: inherit;
+}
+
+.logo {
+  height: 20vh;
+  perspective: 800px;
+  animation: rotate3D 6s cubic-bezier(0.86, 0, 0.07, 1) 1.5s infinite;
+  animation-play-state: var(--animate);
+}
+
+.hover-count {
+  font-size: 4rem;
+  font-weight: 100;
+}
+
+@media (prefers-reduced-motion: reduce ) {
+  .logo {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes rotate3D {
+  to {
+    transform: rotate3d(-180, 90, -90, 720deg);
+  }
+}
