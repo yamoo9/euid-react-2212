@@ -11,6 +11,10 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 import { ALink } from './ALink.js';
 import { ListItem } from './ListItem.js';
+
+// @ts-ignore
+var _window = window,
+  React = _window.React;
 export var List = /*#__PURE__*/function (_React$Component) {
   _inherits(List, _React$Component);
   var _super = _createSuper(List);
