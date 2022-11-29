@@ -1,7 +1,6 @@
 import { ALink } from './ALink.js';
 import { ListItem } from './ListItem.js';
 
-// @ts-ignore
 const { React } = window;
 
 interface ListItem {

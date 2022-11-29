@@ -5,7 +5,6 @@ interface Props {
 }
 
 export const ALink = ({ href, isExternal, ...restProps }: Props) => (
-  // @ts-ignore
   <a
     href={href}
     rel={isExternal ? 'noopener noreferrer' : undefined}

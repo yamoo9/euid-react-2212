@@ -1,9 +1,10 @@
 import App from './App.js';
 
-// @ts-ignore
 const { React, ReactDOM } = window;
 
 const { StrictMode } = React;
+
+// @ts-ignore
 const { createRoot } = ReactDOM;
 
 const container = document.getElementById('app');
