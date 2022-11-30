@@ -34,4 +34,3 @@ export class List extends React.Component {
             React.createElement(ALink, { href: href, isExternal: isExternal }, text))))));
     }
 }
-//# sourceMappingURL=List.js.map
