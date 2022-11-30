@@ -4,11 +4,13 @@
   "version": "1.0.0",
   "description": "이듬과 함께 React 프로그래밍을 학습합니다.",
   "scripts": {
-    "start": "live-server public --host=localhost --port=3000 --no-browser"
+    "start": "live-server public --host=localhost --port=3000 --no-browser",
+    "compile": "tsc",
+    "watch": "tsc --watch"
   },
   "devDependencies": {
     "live-server": "1.2.2",
-    "typescript": "4.9.3"
+    "typescript": "^4.9.3"
   },
   "keywords": [
     "react"
