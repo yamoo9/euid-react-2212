@@ -1,6 +1,5 @@
-import { List } from './components/List.js';
+import { List } from "./components/List.js";
 
-// @ts-ignore
 const { React } = window;
 
 export default function App() {

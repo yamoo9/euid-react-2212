@@ -1,4 +1,3 @@
-// @ts-nocheck
 const { React } = window;
 
 interface ALinkProps {
@@ -10,8 +9,8 @@ interface ALinkProps {
 export const ALink = ({ href, isExternal, ...restProps }: ALinkProps) => (
   <a
     href={href}
-    rel={isExternal ? 'noopener noreferrer' : undefined}
-    target={isExternal ? '_blank' : undefined}
+    rel={isExternal ? "noopener noreferrer" : undefined}
+    target={isExternal ? "_blank" : undefined}
     {...restProps}
   />
 );

@@ -1,7 +1,6 @@
-import { ALink } from './ALink.js';
-import { ListItem } from './ListItem.js';
+import { ALink } from "./ALink.js";
+import { ListItem } from "./ListItem.js";
 
-// @ts-ignore
 const { React } = window;
 
 interface ListProps {}
@@ -25,23 +24,23 @@ export class List extends React.Component<ListProps, ListState> {
 
     this.state = {
       listItems: [
-        { id: 1, href: 'https://reactjs.org', text: 'React', isExternal: true },
+        { id: 1, href: "https://reactjs.org", text: "React", isExternal: true },
         {
           id: 2,
-          href: 'https://reactnative.dev',
-          text: 'React Native',
+          href: "https://reactnative.dev",
+          text: "React Native",
           isExternal: true,
         },
         {
           id: 3,
-          href: 'https://euid.dev',
-          text: 'EUID',
+          href: "https://euid.dev",
+          text: "EUID",
           isExternal: true,
         },
         {
           id: 4,
-          href: 'https://google.com',
-          text: 'Google',
+          href: "https://google.com",
+          text: "Google",
           isExternal: true,
         },
       ],

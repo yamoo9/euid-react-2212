@@ -1,12 +1,13 @@
-import App from './App.js';
+import App from "./App.js";
 
-// @ts-ignore
 const { React, ReactDOM } = window;
 
-const { Component, StrictMode } = React;
+const { StrictMode } = React;
+
+// @ts-ignore
 const { createRoot } = ReactDOM;
 
-const container = document.getElementById('app');
+const container = document.getElementById("app");
 
 createRoot(container).render(
   <StrictMode>
