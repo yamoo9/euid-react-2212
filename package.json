@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "webpack-react-typescript",
+  "version": "1.0.0",
+  "description": "Webpack 모듈 번들러를 사용해 React, TypeScript 등 프론트엔드 개발에 필요한 환경을 직접 구성합니다.",
+  "scripts": {},
+  "keywords": [
+    "webpack",
+    "react",
+    "typescript"
+  ],
+  "license": "MIT"
+}
