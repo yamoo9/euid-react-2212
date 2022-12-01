@@ -1,22 +1,9 @@
-const { resolve } = require("node:path");
+const { merge } = require("webpack-merge");
+const commonConfig = require("./common");
 
-const webpackConfig = {
-  target: "browserslist",
-  mode: "development",
-  entry: {
-    main: resolve("src/main.js"),
-  },
-  output: {
-    path: resolve("public"),
-    filename: "scripts/bundle.js",
-  },
-  devServer: {
-    host: "localhost",
-    port: 3000,
-    client: {
-      progress: true,
-    },
-  },
+const webpackConfig = ({ env }) => {
+  const envConfig = require(`./${env}.js`);
+  return merge(commonConfig, envConfig);
 };
 
 module.exports = webpackConfig;
