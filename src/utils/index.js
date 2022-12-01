@@ -1,2 +1,2 @@
-export * from "./getRandom.js";
-export * from "./styleLog.js";
+export * from "./getRandom";
+export * from "./styleLog";

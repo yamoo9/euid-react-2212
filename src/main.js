@@ -1,4 +1,5 @@
-import { getRandomMinMax, styleLog } from "./utils/index.js";
+import { getRandomMinMax, styleLog } from "./utils";
+import "./another";
 
 function handleBodyClick(e) {
   styleLog("clicked body", "color: #2124ff");
@@ -7,4 +8,4 @@ function handleBodyClick(e) {
   styleLog(`난수: ${randomNumber}`, "color: #4caf51");
 }
 
-document.body.addEventListener("click", handleBodyClick);
+document.addEventListener("click", handleBodyClick);
