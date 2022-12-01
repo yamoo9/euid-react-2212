@@ -1,12 +1,16 @@
 const { resolve } = require("node:path");
+const babelLoader = require("./loaders/babel");
 
 const commonConfig = {
   target: "browserslist",
   resolve: {
-    extensions: ".js .jsx .json .wasm".split(" "),
+    extensions: ".ts .tsx .js .jsx .json .wasm".split(" "),
   },
   entry: {
-    main: resolve("src/main.jsx"),
+    main: resolve("src/main.tsx"),
+  },
+  module: {
+    rules: [babelLoader].filter(Boolean),
   },
 };
 
