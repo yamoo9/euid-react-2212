@@ -1,5 +1,4 @@
 import { getRandomMinMax, styleLog } from "./utils";
-import "./another";
 
 function handleBodyClick(e) {
   styleLog("clicked body", "color: #2124ff");
