@@ -7,8 +7,8 @@ Webpack 모듈 번들러를 사용해 React, TypeScript 등 프론트엔드 개�
 Webpack 모듈 번들러를 사용해 React 개발 환경을 다음 순서에 따라 구성합니다.
 
 - [x] Webpack 모듈 번들러 환경 구성
-- [ ] React, ReactDOM 패키지 설치 및 구성
-- [ ] Babel 로더 구성 및 Babel 환경 구성
+- [x] React, ReactDOM 패키지 설치 및 구성
+- [x] Babel 로더 구성 및 Babel 환경 구성
 - [ ] TypeScript 로더 구성 및 TypeScript 환경 구성
 - [ ] ESLint, Prettier 등 린팅, 포멧팅 도구 환경 구성
 - [ ] 에셋 로더 구성
