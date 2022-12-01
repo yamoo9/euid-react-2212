@@ -63,6 +63,7 @@
   "css.validate": true,
 
   "editor.formatOnSave": true,
+  "editor.inlayHints.enabled": "offUnlessPressed",
 
   "javascript.autoClosingTags": true,
   "javascript.format.enable": false,
