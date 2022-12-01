@@ -3,8 +3,8 @@ const { resolve } = require("node:path");
 const prodConfig = {
   mode: "production",
   output: {
-    path: resolve("public"),
-    filename: "scripts/build.min.js",
+    path: resolve("build"),
+    filename: "main.min.js",
   },
 };
 
