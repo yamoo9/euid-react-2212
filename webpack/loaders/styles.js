@@ -26,8 +26,6 @@ const sassLoader = {
         rule.options.importLoaders += 1;
       }
 
-      console.log(rule);
-
       return rule;
     }),
     {

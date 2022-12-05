@@ -1,6 +1,7 @@
 const { resolve } = require("node:path");
 const babelLoader = require("./loaders/babel");
 const { sassLoader } = require("./loaders/styles");
+const tsLoader = require("./loaders/typescript");
 
 const commonConfig = {
   target: "browserslist",
@@ -11,7 +12,7 @@ const commonConfig = {
     main: resolve("src/main.tsx"),
   },
   module: {
-    rules: [babelLoader, sassLoader].filter(Boolean),
+    rules: [tsLoader, sassLoader].filter(Boolean),
   },
 };
 
