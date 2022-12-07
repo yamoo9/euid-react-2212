@@ -11,7 +11,7 @@ export function App({
   description: initialDescription,
 }: Props): JSX.Element {
   const [headline] = useState<string>(initialHeadline || "React Application");
-  const [description] = useState<string | JSX.Element>(
+  const [description] = useState<Props["description"]>(
     initialDescription || (
       <>
         React is <abbr title="User Interface">UI</abbr> Library
