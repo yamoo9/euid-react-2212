@@ -25,10 +25,12 @@ export class App extends Component<Props, State> {
   }
 
   render() {
+    const { headline, description } = this.state;
+
     return (
       <div className="App">
-        <h1 className="App__Headline">{this.state.headline}</h1>
-        <p>{this.state.description}</p>
+        <h1 className="App__Headline">{headline}</h1>
+        <p>{description}</p>
       </div>
     );
   }
