@@ -5,14 +5,12 @@ interface UserProps {
 }
 
 export function User({ info }: UserProps): JSX.Element {
-  console.log(info);
-
   return (
     <li id={info.id}>
       <figure className="User" lang="en">
         <img src={info.photo} alt="" width={128} height={128} />
         <figcaption>
-          <table className="">
+          <table className="border-separate border-spacing-2 border border-slate-400">
             <caption>{info.name} information</caption>
             <thead>
               <tr>
