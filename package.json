@@ -9,8 +9,8 @@
   },
   "scripts": {
     "start": "npm run dev -- --open",
-    "dev": "webpack serve --config ./webpack/config.js --env env=dev",
-    "build": "webpack build --config ./webpack/config.js --env env=prod"
+    "dev": "webpack serve --config ./webpack/config.js --env env=dev --progress",
+    "build": "webpack build --config ./webpack/config.js --env env=prod --progress"
   },
   "dependencies": {
     "react": "18.2.0",

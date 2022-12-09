@@ -11,9 +11,11 @@ export function App({
   headline: initialHeadline,
   description: initialDescription,
 }: Props): JSX.Element {
+  // React 상태 관리
   const [headline, setHeadline] = useState<string | undefined>(
     initialHeadline || "React Application"
   );
+
   const [description, setDescription] = useState<Props["description"]>(
     initialDescription || (
       <>
@@ -22,12 +24,19 @@ export function App({
     )
   );
 
+  // React 이벤트 리스너(핸들러) → 콜백(callback)
+  // 사이드 이펙트 (실제 DOM에 접근 가능)
   const handleUpdateHeadlineAndDescription = ({
     headline,
     description,
   }: Props) => {
     setHeadline(headline);
     setDescription(description);
+
+    (document.querySelector(".App")! as HTMLDivElement).style.cssText = `
+      background: red;
+      color: black;
+    `;
   };
 
   return (
