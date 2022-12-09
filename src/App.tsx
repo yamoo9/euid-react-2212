@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { FormControls } from "./FormControls";
+import { useState, useEffect } from "react";
+import ButtonControl from "./ButtonControl";
 import "./styles/App.scss";
 
 export interface Props {
@@ -12,6 +12,20 @@ export function App({
   description: initialDescription,
 }: Props): JSX.Element {
   // React 상태 관리
+  const [count, setCount] = useState<number>(100);
+
+  const handleButtonClick = () => {
+    console.log("clicked button");
+    setCount((count) => count + 3);
+  };
+
+  // 사이드 이펙트 처리 (연관된 상태와 함께 묶어서 관리 → 관심사의 분리)
+  useEffect(() => {
+    // side effects 처리 로직
+    // React와 관련 없는 처리(일)
+    // document.title = `(${count}) ${ORIGINAL_DOCUMENT_TITLE}`;
+  });
+
   const [headline, setHeadline] = useState<string | undefined>(
     initialHeadline || "React Application"
   );
@@ -26,6 +40,7 @@ export function App({
 
   // React 이벤트 리스너(핸들러) → 콜백(callback)
   // 사이드 이펙트 (실제 DOM에 접근 가능)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleUpdateHeadlineAndDescription = ({
     headline,
     description,
@@ -33,7 +48,7 @@ export function App({
     setHeadline(headline);
     setDescription(description);
 
-    (document.querySelector(".App")! as HTMLDivElement).style.cssText = `
+    (document.querySelector(".App") as HTMLDivElement).style.cssText = `
       background: red;
       color: black;
     `;
@@ -41,9 +56,9 @@ export function App({
 
   return (
     <div className="App">
-      <FormControls onUpdate={handleUpdateHeadlineAndDescription} />
       <h1 className="App__Headline">{headline}</h1>
       <p>{description}</p>
+      <ButtonControl count={count} onUpdate={handleButtonClick} />
     </div>
   );
 }
