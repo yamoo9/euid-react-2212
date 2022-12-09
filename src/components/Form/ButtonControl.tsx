@@ -1,12 +1,12 @@
-import { useDocumentTitle } from "./hooks/useDocumentTitle";
 import anime from "animejs";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 
 interface ButtonControlProps {
   count: number;
   onUpdate?: () => void;
 }
 
-export default function ButtonControl({
+export function ButtonControl({
   count,
   onUpdate,
 }: ButtonControlProps): JSX.Element {

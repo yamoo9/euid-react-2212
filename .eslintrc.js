@@ -25,5 +25,6 @@ module.exports = {
   plugins: ["react", "react-hooks", "@typescript-eslint"],
   rules: {
     "react/button-has-type": "warn",
+    "@typescript-eslint/no-var-requires": "off",
   },
 };

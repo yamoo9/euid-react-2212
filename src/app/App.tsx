@@ -1,12 +1,6 @@
 import { useState, useEffect } from "react";
-import ButtonControl from "./ButtonControl";
-import "./styles/App.scss";
-
-// React 월드의 사이드 이펙트
-// - [x] 문서 객체 접근/조작
-// - [ ] 네트워크 요청/응답
-// - [ ] 이벤트 구독/취소
-// - [ ] 오류 감지
+import { UserList } from "@/components";
+import "@/styles/App.scss";
 
 export interface Props {
   headline?: string;
@@ -18,12 +12,12 @@ export function App({
   description: initialDescription,
 }: Props): JSX.Element {
   // React 상태 관리
-  const [count, setCount] = useState<number>(100);
+  // const [count, setCount] = useState<number>(100);
 
-  const handleButtonClick = () => {
-    console.log("clicked button");
-    setCount((count) => count + 3);
-  };
+  // const handleButtonClick = () => {
+  //   console.log("clicked button");
+  //   setCount((count) => count + 3);
+  // };
 
   // 사이드 이펙트 처리 (연관된 상태와 함께 묶어서 관리 → 관심사의 분리)
   useEffect(() => {
@@ -64,7 +58,7 @@ export function App({
     <div className="App">
       <h1 className="App__Headline">{headline}</h1>
       <p>{description}</p>
-      <ButtonControl count={count} onUpdate={handleButtonClick} />
+      <UserList />
     </div>
   );
 }
