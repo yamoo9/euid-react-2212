@@ -2,6 +2,12 @@ import { useState, useEffect } from "react";
 import ButtonControl from "./ButtonControl";
 import "./styles/App.scss";
 
+// React 월드의 사이드 이펙트
+// - [x] 문서 객체 접근/조작
+// - [ ] 네트워크 요청/응답
+// - [ ] 이벤트 구독/취소
+// - [ ] 오류 감지
+
 export interface Props {
   headline?: string;
   description?: string | JSX.Element;

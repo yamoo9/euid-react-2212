@@ -1,4 +1,5 @@
 import { useDocumentTitle } from "./hooks/useDocumentTitle";
+import anime from "animejs";
 
 interface ButtonControlProps {
   count: number;
@@ -16,8 +17,18 @@ export default function ButtonControl({
   return (
     <button
       type="button"
-      className="mt-2 px-2 py-1 bg-indigo-600 text-white"
-      onClick={onUpdate}
+      className="myButton mt-2 px-2 py-1 bg-indigo-600 text-white"
+      onClick={() => {
+        onUpdate?.();
+        anime({
+          targets: ".myButton",
+          scale: 1.3,
+          rotate: "-1turn",
+          backgroundColor: "#e75192",
+          color: "#fff",
+          direction: "alternate",
+        });
+      }}
     >
       {count}
     </button>
