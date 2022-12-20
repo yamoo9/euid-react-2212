@@ -1,17 +1,13 @@
 import "./styles/global.scss";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { App } from "./App";
+import AppRouter from "./AppRouter";
 
-createRoot(document.getElementById("app") as HTMLDivElement).render(
+const container = document.getElementById("app") as HTMLDivElement;
+const root = createRoot(container);
+
+root.render(
   <StrictMode>
-    <App
-      headline={"React Application"}
-      description={
-        <>
-          React is <abbr title="User Interface">UI</abbr> Library
-        </>
-      }
-    />
+    <AppRouter />
   </StrictMode>
 );
