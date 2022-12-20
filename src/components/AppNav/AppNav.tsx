@@ -5,10 +5,10 @@ export function AppNav() {
     <nav className="AppNavigation">
       <ul className="flex gap-2">
         <li>
-          <AppLink to="/">User List</AppLink>
+          <AppLink to="/">Home</AppLink>
         </li>
         <li>
-          <AppLink to="/user">User</AppLink>
+          <AppLink to="/users">User List</AppLink>
         </li>
       </ul>
     </nav>
