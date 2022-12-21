@@ -1,13 +1,15 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useReducer, useEffect, useRef } from "react";
+import {
+  countReducer,
+  decrementCount,
+  incrementCount,
+  initialCountState,
+  resetCount,
+} from "./features/count";
 
 export function LearRefFunction() {
-  // Ref의 첫번째 사용 방법 (DOM 요소 접근/조작)
-  // 접근성은 필히 명령형으로만 처리 가능하다.
-  // 명령형 프로그래밍
   const containerRef = useRef<null | HTMLDivElement>(null);
 
-  // componentDidMount
-  // 컴포넌트 마운트 이후 시점에 콜백(실행)
   useEffect(() => {
     const { current: containerElement } = containerRef;
     if (containerElement) {
@@ -21,11 +23,12 @@ export function LearRefFunction() {
 
   /* -------------------------------------------------------------------------- */
 
-  let pleaseRememberMeRef = useRef<string>("나를 기억해주세요."); // { current: '나를 기억해주세요.' }
+  let pleaseRememberMeRef = useRef<string>("나를 기억해주세요.");
 
-  console.log("initialization pleaseRememberMe", pleaseRememberMeRef);
+  // console.log("initialization pleaseRememberMe", pleaseRememberMeRef);
 
   const [message, setMessage] = useState<string>("React.FC");
+  const [countState, dispatch] = useReducer(countReducer, initialCountState);
 
   const handleUpdateState = () => {
     setMessage((prevMessage) => prevMessage + "😃");
@@ -54,6 +57,50 @@ export function LearRefFunction() {
         update remember me message
       </button>
       <p>{pleaseRememberMeRef.current}</p>
+
+      <hr />
+
+      <div
+        style={{
+          display: "flex",
+          gap: 4,
+          marginBottom: 20,
+        }}
+      >
+        <button
+          type="button"
+          onClick={() => {
+            dispatch(incrementCount());
+          }}
+        >
+          inc
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            dispatch(decrementCount());
+          }}
+        >
+          dec
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            dispatch(resetCount());
+          }}
+        >
+          reset
+        </button>
+      </div>
+
+      <output
+        style={{
+          fontSize: 40,
+          fontWeight: 700,
+        }}
+      >
+        {countState.count}
+      </output>
     </div>
   );
 }
